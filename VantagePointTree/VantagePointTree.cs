@@ -85,7 +85,7 @@ namespace LaXiS.VantagePointTree
                 if (results.Count == k)
                     results.RemoveAt(results.Count - 1);
 
-                results.Add(new TreeSearchResult<T> { Item = node.Item, Distance = distance });
+                results.Add(new TreeSearchResult<T>(node.Item, distance));
 
                 if (results.Count == k)
                 {

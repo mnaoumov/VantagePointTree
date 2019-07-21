@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using LaXiS.VantagePointTree;
 
-namespace LaXiS.VantagePointTree
+namespace VantagePointTree.Examples
 {
     class Program
     {
         static void Main(string[] args)
         {
             var random = new Random();
+
+            // Create 1million random points (with values from 0 to 10million)
             var items = new List<Point>();
             for (int i = 0; i < 1000000; i++)
             {
@@ -16,16 +19,17 @@ namespace LaXiS.VantagePointTree
                 // Console.WriteLine($"{point.Key} {point.Value}");
             }
 
+            // Build tree
             var vpTree = new VantagePointTree<Point>(items);
 
+            // Choose a random search target point
             var targetPoint = new Point("PointSearch", random.Next(10000001));
             Console.WriteLine($"Search: {targetPoint}");
 
+            // Search the tree for 100 points similar to targetPoint
             var results = vpTree.Search(targetPoint, 100);
             foreach (var result in results)
-            {
                 Console.WriteLine($"{result}");
-            }
         }
     }
 
