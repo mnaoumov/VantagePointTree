@@ -1,15 +1,31 @@
-
 # VantagePointTree
 
 C# implementation of a vantage-point tree
 
 ## Details
 
-The project is based on .NET Core 2.2 and can be easily run in Visual Studio Code.
+There is no stable version, this project is Work In Progress.
 
-The VantagePointTree class is generic and can accept any item type that implements `ITreeItem<T>` (for the `DistanceFrom` distance calculation method; see class `Point` in `Program.cs`).
+The solution includes:
 
-Currently it is only possible to build the tree from a list of items and to search it; insertion and deletion are on my TODO list.
+- .NET Standard 2.0 class library implementation (`VantagePointTree`)
+- xUnit.net testing project (`VantagePointTree.Tests`)
+- .NET Core 2.2 example program (`VantagePointTree.Examples`)
+
+The VantagePointTree class is generic and can accept any item type that implements `ITreeItem<T>` (for the `DistanceFrom` distance calculation method).
+
+## Features
+
+- Build tree from a list of items
+- Search tree for k nearest neighbors
+
+## TODO (by priority)
+
+1. Item insertion and removal (plus tree balancing if needed)
+2. Save and load to/from file
+3. Code documentation
+
+- Optimization (not a priority)
 
 ## References and inspirations
 

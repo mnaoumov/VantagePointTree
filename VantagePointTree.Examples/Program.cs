@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using LaXiS.VantagePointTree;
 
-namespace VantagePointTree.Examples
+namespace LaXiS.VantagePointTree.Examples
 {
     class Program
     {
