@@ -20,7 +20,8 @@ namespace LaXiS.VantagePointTree
 
         public void Build(List<T> items)
         {
-            _rootNode = _buildRecursive(items);
+            // Build on a shallow copy of the list, so we do not modify the original list
+            _rootNode = _buildRecursive(items.GetRange(0, items.Count));
             // _rootNode.Dump();
         }
 
@@ -110,5 +111,7 @@ namespace LaXiS.VantagePointTree
                     _searchRecursive(target, k, node.LeftNode, ref tau, results);
             }
         }
+
+        // TODO implement search by max distance
     }
 }
