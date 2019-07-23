@@ -10,7 +10,7 @@ namespace LaXiS.VantagePointTree.Tests
     {
         private readonly ITestOutputHelper _output;
 
-        public Test(ITestOutputHelper output)
+        public UnitTest(ITestOutputHelper output)
         {
             _output = output;
         }

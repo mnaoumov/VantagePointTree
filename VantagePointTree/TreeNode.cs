@@ -4,10 +4,10 @@ namespace LaXiS.VantagePointTree
 {
     public class TreeNode<T> where T : ITreeItem<T>
     {
-        public T Item;
-        public double Radius;
-        public TreeNode<T> LeftNode;
-        public TreeNode<T> RightNode;
+        public T Item { get; set; }
+        public double Radius { get; set; }
+        public TreeNode<T> LeftNode { get; set; }
+        public TreeNode<T> RightNode { get; set; }
 
         public void Dump(int step = 0)
         {

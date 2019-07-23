@@ -4,7 +4,7 @@ C# implementation of a vantage-point tree
 
 ## Details
 
-There is no stable version, this project is Work In Progress.
+This implementation is mostly instructional, as can be seen by all the explanatory comments spread around the code. I do not guarantee its correctness.
 
 The solution includes:
 
@@ -22,8 +22,8 @@ The VantagePointTree class is generic and can accept any item type that implemen
 ## TODO (by priority)
 
 1. Item insertion and removal (plus tree balancing if needed)
-2. Save and load to/from file
-3. Code documentation
+2. Search by max distance
+3. Save and load to/from file
 
 - Optimization (not a priority)
 

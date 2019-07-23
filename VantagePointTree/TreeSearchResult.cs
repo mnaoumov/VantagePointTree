@@ -2,8 +2,8 @@ namespace LaXiS.VantagePointTree
 {
     public class TreeSearchResult<T>
     {
-        public T Item;
-        public double Distance;
+        public T Item { get; set; }
+        public double Distance { get; set; }
 
         public TreeSearchResult(T item, double distance)
         {
